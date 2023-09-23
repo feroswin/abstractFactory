@@ -7,9 +7,10 @@ public class VehicleTests
     public void SportsCar_Drive_ShouldReturnCorrectMessage()
     {
         // Arrange
-        Car sportsCar = new SportsCar();
+        SportsVehicleFactory sportVehicleFactory = new SportsVehicleFactory();
 
         // Act
+        Car sportsCar = sportVehicleFactory.CreateCar();
         string result = CaptureConsoleOutput(() => sportsCar.Drive());
 
         // Assert
@@ -20,9 +21,10 @@ public class VehicleTests
     public void SportsMotorcycle_Ride_ShouldReturnCorrectMessage()
     {
         // Arrange
-        Motorcycle sportsMotorcycle = new SportsMotorcycle();
+        SportsVehicleFactory sportVehicleFactory = new SportsVehicleFactory();
 
         // Act
+        Motorcycle sportsMotorcycle = sportVehicleFactory.CreateMotorcycle();
         string result = CaptureConsoleOutput(() => sportsMotorcycle.Ride());
 
         // Assert
@@ -33,9 +35,10 @@ public class VehicleTests
     public void FamilyCar_Drive_ShouldReturnCorrectMessage()
     {
         // Arrange
-        Car familyCar = new FamilyCar();
+        FamilyVehicleFactory familyVehicleFactory = new FamilyVehicleFactory();
 
         // Act
+        Car familyCar = familyVehicleFactory.CreateCar();
         string result = CaptureConsoleOutput(() => familyCar.Drive());
 
         // Assert
@@ -46,9 +49,10 @@ public class VehicleTests
     public void FamilyMotorcycle_Ride_ShouldReturnCorrectMessage()
     {
         // Arrange
-        Motorcycle familyMotorcycle = new FamilyMotorcycle();
+        FamilyVehicleFactory familyVehicleFactory = new FamilyVehicleFactory();
 
         // Act
+        Motorcycle familyMotorcycle = familyVehicleFactory.CreateMotorcycle();
         string result = CaptureConsoleOutput(() => familyMotorcycle.Ride());
 
         // Assert
